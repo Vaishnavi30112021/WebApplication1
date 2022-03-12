@@ -15,7 +15,8 @@
 </html>
 
 
-<%--MY Change is this--%>
+<%--MY New Change is this--%>
+
 
 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CustDBConnectionString1"].ConnectionString);
                 SqlCommand cmd = new SqlCommand("delete from CustomerDetails(Name,Age)where(@Name,@Age)", conn);
