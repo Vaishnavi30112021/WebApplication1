@@ -13,11 +13,15 @@
     </form>
 </body>
 </html>
+
+
+<%--MY Change is this--%>
+
 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CustDBConnectionString1"].ConnectionString);
                 SqlCommand cmd = new SqlCommand("delete from CustomerDetails(Name,Age)where(@Name,@Age)", conn);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "Delete CustomerDetails where Name=" + txt1.Text;
-                cmd.Connection = conn;
+                cmd.Connection = conns;
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
